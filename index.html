@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKIFCore</title>
+    
+	<link rel="icon" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="icon" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" sizes="48x48" href="/img/favicon/favicon-48x48.png">
+	<link rel="icon" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+	<link rel="manifest" href="/img/favicon/site.webmanifest">
+
+	<meta name="application-name" content="SKIFCore">
+	<meta name="apple-mobile-web-app-title" content="SKIFCore">
+	<meta name="theme-color" content="#050505">	
+
+    <!-- Fonts: Unbounded + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="layout">
+        
+        <header class="top-bar glass">
+            <div class="brand">
+                <div class="logo-mark"><i class="fa-solid fa-cube"></i></div>
+                <div class="logo-text">SKIF<span>Core</span></div>
+            </div>
+            
+            <div class="status-indicator">
+                <div class="pulse-dot"></div>
+                <span>System Online</span>
+            </div>
+        </header>
+
+        <div class="hero-section">
+            <div class="hero-badge">
+                <i class="fa-solid fa-layer-group"></i> Экосистема
+            </div>
+            <h1 class="hero-title">Единый центр доступа<br>ко всем <span class="text-gradient">инструментам</span></h1>
+            <p class="hero-desc">Управляйте паролями, серверами и файлами в одном интерфейсе.</p>
+        </div>
+
+        <main class="bento-grid">
+            
+            <!-- Карточка: SKIFVault -->
+            <a href="/vault" class="card glass-card accent-cyan">
+                <div class="card-bg-gradient"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>SKIFVault</h3>
+                        <p>Защищенное хранилище заметок и команд с шифрованием AES.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Карточка: SKIFPass -->
+            <a href="/pass" class="card glass-card accent-green">
+                <div class="card-bg-gradient"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>SKIFPass</h3>
+                        <p>Генератор криптостойких паролей и менеджер доступов.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Карточка: SKIFConvert -->
+            <a href="/convert" class="card glass-card accent-orange">
+                <div class="card-bg-gradient"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>SKIFConvert</h3>
+                        <p>Быстрая конвертация файлов, медиа и документов.</p>
+                    </div>
+                </div>
+            </a>
+			
+            <!-- Карточка: SKIFFav -->
+            <a href="/fav" class="card glass-card accent-purple">
+                <div class="card-bg-gradient"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>SKIFFavicon</h3>
+                        <p>Генератор значков.</p>
+                    </div>
+                </div>
+            </a>	
+
+            <!-- Карточка: SKIFProtect -->
+            <a href="/protect" class="card glass-card accent-protect">
+                <div class="card-bg-gradient"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>SKIFProtect</h3>
+                        <p>JavaScript Obfuscation. Преобразуйте свой код в пользовательский байт-код</p>
+                    </div>
+                </div>
+            </a>				
+
+             <!-- Карточка: VPN -->
+             <a href="https://adm.skifrust.ru" target="_blank" class="card glass-card accent-blueviolet">
+                <div class="card-bg-gradient"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div class="card-arrow">
+                            <i class="fa-solid fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>SKIF VPN</h3>
+                        <p>Личный VPN сервис. Высокая скорость и анонимность.</p>
+                    </div>
+                </div>
+            </a>
+
+        </main>
+
+        <footer>
+            <p>All trademarks referenced are the properties of their respective owners. All rights reserved.<br>SKIF Systems © 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

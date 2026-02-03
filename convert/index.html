@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SKIFConvert</title>
+	
+	<link rel="icon" sizes="16x16" href="img/favicon-convert/favicon-16x16.png">
+	<link rel="icon" sizes="32x32" href="img/favicon-convert/favicon-32x32.png">
+	<link rel="icon" sizes="48x48" href="img/favicon-convert/favicon-48x48.png">
+	<link rel="icon" sizes="96x96" href="img/favicon-convert/favicon-96x96.png">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-convert/apple-touch-icon.png">
+	<link rel="manifest" href="img/favicon-convert/site.webmanifest">
+
+	<meta name="application-name" content="SKIFConvert">
+	<meta name="apple-mobile-web-app-title" content="SKIFConvert">
+	<meta name="theme-color" content="#050505">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <div class="layout">
+        
+        <!-- Header -->
+        <header class="top-bar glass">
+            <div class="header-left">
+                <a href="/" class="back-btn" title="На главную">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <div class="brand">
+                    <div class="logo-mark"><i class="fa-solid fa-repeat"></i></div>
+                    <div class="logo-text">SKIF<span>Convert</span></div>
+                </div>
+            </div>
+            <!-- Кнопка темы удалена -->
+        </header>
+
+        <!-- Nav -->
+        <nav class="category-nav glass">
+            <div class="nav-track">
+                <button class="nav-item active" onclick="changeCategory('data', this)">Данные</button>
+                <button class="nav-item" onclick="changeCategory('time', this)">Время</button>
+                <button class="nav-item" onclick="changeCategory('length', this)">Длина</button>
+                <button class="nav-item" onclick="changeCategory('weight', this)">Вес</button>
+            </div>
+        </nav>
+
+        <!-- Main Card -->
+        <main class="converter-card glass">
+            
+            <!-- INPUT -->
+            <div class="field-group">
+                <label>Исходное значение</label>
+                <div class="input-wrapper">
+                    <input type="number" id="input-val" placeholder="0" oninput="calculate()" inputmode="decimal">
+                    <div class="custom-select">
+                        <select id="unit-from" onchange="calculate()"></select>
+                        <i class="fa-solid fa-chevron-down caret"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SWAP -->
+            <div class="swap-zone">
+                <div class="divider"></div>
+                <button class="swap-btn" onclick="swapUnits()" title="Поменять местами">
+                    <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+                </button>
+                <div class="divider"></div>
+            </div>
+
+            <!-- OUTPUT (Target) -->
+            <div class="field-group">
+                <label>Конвертация в</label>
+                <div class="input-wrapper target">
+                    <div class="target-label">Результат ниже</div>
+                    <div class="custom-select">
+                        <select id="unit-to" onchange="calculate()"></select>
+                        <i class="fa-solid fa-chevron-down caret"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULT DISPLAY -->
+            <div class="result-box" id="result-zone" onclick="copyResult()">
+                <div class="res-title">Результат</div>
+                <div class="res-value" id="res-val">0</div>
+                <div class="res-unit" id="res-unit-label">...</div>
+                <div class="copy-indicator">
+                    <i class="fa-regular fa-clone"></i> Скопировать
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="toast" class="toast"><i class="fa-solid fa-check"></i> Скопировано</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
